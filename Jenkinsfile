@@ -10,7 +10,7 @@ node{
     }
 
     stage('Run image'){
-        docker.image('reda/nginx').withRun('-p 80:80'){ c - >
+        docker.image('reda/nginx').withRun('-p 80:80'){ c ->
             sh 'docker ps'
             sh 'curl localhost'
         }
